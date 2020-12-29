@@ -1,5 +1,4 @@
 <?php
-
 namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -17,7 +16,7 @@ class FortuneController extends Controller
             ->getManager()
             ->getRepository('AppBundle:Category');
 
-        $categories = $categoryRepository->findAll();
+        $categories = $categoryRepository->findAllOrdered();
 
         return $this->render('fortune/homepage.html.twig',[
             'categories' => $categories
