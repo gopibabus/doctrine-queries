@@ -8,10 +8,12 @@
                     <thead class="header-bkgrnd">
                         <tr>
                             <th>
-                               <span class="fa {{ category.iconKey }}"></span> {{ category.name }} 
+                               <span class="fa {{ category.iconKey }}"></span> {{ categoryName }}
                             </th>
                             <th>
-                               Printed History
+                               Printed History (
+                                {{ fortunesPrinted | number_format }} total {{ averagePrinted | number_format }} avg
+                                )
                             </th>
                         </tr>
                     </thead>
